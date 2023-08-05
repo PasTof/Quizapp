@@ -71,3 +71,17 @@ function showquestion() {
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
 }
+
+function answer(selection) {
+    let question = questions[currentQuestion];
+    console.log('selected answer is', selection);
+    let selectedQuestionNumber = selection.slice(-1);
+    console.log('selectedQuestionNumber is', selectedQuestionNumber);
+    console.log('current question is', question['right_answer']);
+
+    if (selectedQuestionNumber == question['right_answer']) {
+        console.log('richtige Antwort');
+    } else {
+        console.log('falsche Antwort');
+    };
+}
