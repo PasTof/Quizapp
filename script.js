@@ -55,6 +55,8 @@ let questions = [
     },
 ];
 
+let rightQuestions = 0; 
+
 let currentQuestion = 0;
 
 function init() {
@@ -68,6 +70,10 @@ function showquestion() {
     if (currentQuestion >= questions.length) {
         document.getElementById('endscreen').style="";
         document.getElementById('questionBody').style="display: none;";
+
+        document.getElementById('amount-Of-Questions').innerHTML = questions.length;
+        document.getElementById('right-amount-Of-Questions').innerHTML = rightQuestions;
+        document.getElementById('header-image').src = 'img/trophy.png'
     } else {
 
     let question = questions[currentQuestion];
@@ -92,6 +98,7 @@ function answer(selection) {
     if (selectedQuestionNumber == question['right_answer']) {
         console.log('richtige Antwort');
         document.getElementById(selection).parentNode.classList.add('bg-success');
+        rightQuestions++; 
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
