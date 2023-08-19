@@ -128,3 +128,14 @@ function resetAnswerButtons() {
     document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
     document.getElementById('answer_4').parentNode.classList.remove('bg-success');
 }
+
+function restartGame() {
+    document.getElementById('header-image').src = 'img/pencil.jpg';
+    document.getElementById('questionBody').style = '';
+    document.getElementById('endscreen').style = 'display: none;'; 
+
+    rightQuestions = 0; 
+    currentQuestion = 0; 
+
+    init();
+}
