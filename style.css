@@ -1,5 +1,5 @@
 body {
-    background-color: deepskyblue !important;
+    background-color: #f4edff !important;
 }
 
 .container {
@@ -10,7 +10,15 @@ body {
     align-items: center;
 
 }
-
+.nav{
+    padding: 0;
+}
+.progress{
+    flex: 1;
+}
+.progress, .progress-stacked {
+    --bs-progress-border-radius: var(--bs-none-radius);
+}
 .quiz-card {
     width: 30rem;
 }
